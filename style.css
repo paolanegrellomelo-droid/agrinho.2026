@@ -1,1 +1,265 @@
 
+/* style.css */
+/* RESET básico e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f8f0;
+    color: #1a3c1a;
+    transition: all 0.3s ease;
+}
+
+/* Alto contraste (classe ativada pelo JS) */
+body.alto-contraste {
+    background-color: #000000;
+    color: #ffff00;
+}
+
+body.alto-contraste a,
+body.alto-contraste button {
+    color: #ffff00;
+    border-color: #ffff00;
+}
+
+body.alto-contraste .card-empresa {
+    background-color: #111;
+    border-color: yellow;
+}
+
+/* Container geral */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #1b5e20, #2e7d32);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-img {
+    border-radius: 50%;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+    color: #c8e6c9;
+}
+
+/* Seções */
+.secao {
+    background-color: white;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+body.alto-contraste .secao {
+    background-color: #111;
+    border: 1px solid yellow;
+}
+
+h2 {
+    color: #1b5e20;
+    margin-bottom: 1rem;
+    border-left: 6px solid #f4b400;
+    padding-left: 1rem;
+}
+
+.imagem-destaque, .imagem-conteudo {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin: 1rem 0;
+}
+
+/* Calculadora */
+.calculadora {
+    background-color: #e8f5e9;
+    padding: 1.5rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.calculadora label {
+    font-weight: bold;
+}
+
+.calculadora input {
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.calculadora button, .btn-contato {
+    background-color: #f4b400;
+    color: #1a3c1a;
+    border: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.calculadora button:hover, .btn-contato:hover {
+    background-color: #e0a800;
+    transform: scale(1.02);
+}
+
+.resultado {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-top: 0.5rem;
+}
+
+/* Empresas */
+.empresas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.card-empresa {
+    background-color: #f1f8e9;
+    padding: 1rem;
+    border-radius: 20px;
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    border: 1px solid #c5e1a5;
+}
+
+.card-empresa h3 {
+    color: #2e7d32;
+}
+
+.mensagem-contato {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #1b5e20;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Botão de acessibilidade fixo */
+.acessibilidade {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.btn-acess {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.painel-acess {
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    background-color: white;
+    border-radius: 12px;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    min-width: 150px;
+    border: 1px solid #ccc;
+}
+
+.painel-acess button {
+    background-color: #eee;
+    border: none;
+    padding: 6px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.painel-acess button:hover {
+    background-color: #ddd;
+}
+
+/* Responsividade para celular */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu {
+        justify-content: center;
+    }
+    .empresas {
+        flex-direction: column;
+    }
+    body {
+        font-size: 1rem;
+    }
+}
+
+/* Ajuste de fonte padrão para botão de aumentar/diminuir */
+body.fonte-grande {
+    font-size: 1.2rem;
+}
+
+body.fonte-pequena {
+    font-size: 0.9rem;
+}
