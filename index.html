@@ -1,1 +1,153 @@
 
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Raízes Solares - Energia solar para propriedades rurais. Sustentabilidade, economia e inovação no campo.">
+    <title>Raízes Solares | Energia Solar no Campo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho com menu de navegação -->
+    <header>
+        <div class="logo-container">
+            <img src="https://placehold.co/50x50/2e7d32/white?text=RS" alt="Logo Raízes Solares: sol com folha verde" class="logo-img">
+            <h1>Raízes Solares</h1>
+        </div>
+        <nav aria-label="Menu principal">
+            <ul class="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#problema">Problema</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#conclusao">Conclusão</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Botão de acessibilidade fixo -->
+    <div class="acessibilidade" aria-label="Botão de acessibilidade">
+        <button id="btnAcessibilidade" class="btn-acess" aria-expanded="false">🔍 Acessibilidade</button>
+        <div id="painelAcess" class="painel-acess" hidden>
+            <button id="aumentarFonte">A+ Aumentar fonte</button>
+            <button id="diminuirFonte">A- Diminuir fonte</button>
+            <button id="altoContraste">🌓 Alto contraste</button>
+        </div>
+    </div>
+
+    <main>
+        <!-- SEÇÃO INÍCIO -->
+        <section id="inicio" class="secao">
+            <article class="hero">
+                <h2>🌱 Raízes Solares</h2>
+                <p class="subtitulo">Energia que vem do sol para fortalecer o campo</p>
+                <p><strong>Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente</strong></p>
+                <img src="https://placehold.co/900x400/1b5e20/white?text=Placas+solares+no+campo" alt="Placas solares instaladas em uma fazenda, captando energia solar ao pôr do sol" class="imagem-destaque">
+            </article>
+        </section>
+
+        <!-- SEÇÃO SOBRE O TEMA -->
+        <section id="sobre" class="secao">
+            <h2>☀️ Sobre o projeto</h2>
+            <article>
+                <p>O <strong>Raízes Solares</strong> nasceu para mostrar como a energia solar pode transformar propriedades rurais. Mais que economia, é uma escolha sustentável que reduz a dependência de combustíveis fósseis como diesel e gasolina.</p>
+                <p>A energia solar traz benefícios econômicos (redução de custos), ambientais (menos poluição) e sociais (independência energética no campo).</p>
+                <img src="https://placehold.co/600x300/388e3c/white?text=Painel+solar+na+fazenda" alt="Fazenda com painéis solares no telhado e plantação ao fundo" class="imagem-conteudo">
+            </article>
+        </section>
+
+        <!-- SEÇÃO PROBLEMA AMBIENTAL -->
+        <section id="problema" class="secao">
+            <h2>⚠️ O problema</h2>
+            <article>
+                <p>Muitos agricultores e moradores da zona rural ainda não conhecem os benefícios da energia solar. Continuam usando geradores a diesel ou ligações elétricas caras e poluentes.</p>
+                <p><strong>Principais desafios:</strong></p>
+                <ul>
+                    <li>Alto custo da energia elétrica no campo</li>
+                    <li>Dependência de combustíveis fósseis</li>
+                    <li>Falta de informação sobre incentivos e economia</li>
+                    <li>Poluição sonora e do ar por geradores</li>
+                </ul>
+                <p>Com informação e tecnologia, é possível mudar essa realidade!</p>
+                <img src="https://placehold.co/600x300/2e7d32/white?text=Gerador+a+diesel+vs+placa+solar" alt="Comparação: gerador a diesel poluente ao lado de placa solar limpa" class="imagem-conteudo">
+            </article>
+        </section>
+
+        <!-- SEÇÃO CALCULADORA (FUNCIONALIDADE PRINCIPAL) -->
+        <section id="calculadora" class="secao">
+            <h2>💰 Simulador de economia com energia solar</h2>
+            <article>
+                <p>Preencha os dados abaixo e veja quanto você pode economizar trocando o diesel/gasolina por energia solar.</p>
+                
+                <div class="calculadora">
+                    <label for="consumoMensal">💸 Custo atual com diesel/gasolina (R$/mês):</label>
+                    <input type="number" id="consumoMensal" placeholder="Ex: 800" value="800" step="100">
+                    
+                    <label for="custoInstalacao">🔧 Custo estimado da instalação solar (R$):</label>
+                    <input type="number" id="custoInstalacao" placeholder="Ex: 15000" value="15000" step="1000">
+                    
+                    <button id="calcularEconomia">Calcular economia</button>
+                    
+                    <div id="resultadoEconomia" class="resultado">
+                        <p>📊 <strong>Resultados:</strong></p>
+                        <p id="economiaMensal"></p>
+                        <p id="payback"></p>
+                        <p id="economia10anos"></p>
+                    </div>
+                </div>
+                <p class="dica-nota">* Simulação aproximada considerando economia de 95% na conta de energia após instalação.</p>
+            </article>
+        </section>
+
+        <!-- SEÇÃO CONTATO (empresas especializadas) -->
+        <section id="contato" class="secao">
+            <h2>🏢 Empresas especializadas em energia solar rural</h2>
+            <article>
+                <p>Conheça empresas que ajudam agricultores a instalar energia solar:</p>
+                <div class="empresas">
+                    <div class="card-empresa">
+                        <h3>Sol do Campo Energia</h3>
+                        <p>📍 Atuação: Região Sul e Sudeste</p>
+                        <p>📞 (11) 99999-1111</p>
+                        <button class="btn-contato" data-empresa="Sol do Campo">Solicitar contato</button>
+                    </div>
+                    <div class="card-empresa">
+                        <h3>EcoAgro Solar</h3>
+                        <p>📍 Atuação: Todo o Brasil rural</p>
+                        <p>📞 (21) 98888-2222</p>
+                        <button class="btn-contato" data-empresa="EcoAgro Solar">Solicitar contato</button>
+                    </div>
+                    <div class="card-empresa">
+                        <h3>Raízes Renováveis</h3>
+                        <p>📍 Especialistas em pequenas propriedades</p>
+                        <p>📞 (41) 97777-3333</p>
+                        <button class="btn-contato" data-empresa="Raízes Renováveis">Solicitar contato</button>
+                    </div>
+                </div>
+                <p id="mensagemContato" class="mensagem-contato"></p>
+            </article>
+        </section>
+
+        <!-- SEÇÃO CONCLUSÃO -->
+        <section id="conclusao" class="secao">
+            <h2>🌎 Conclusão</h2>
+            <article>
+                <p>A energia solar não é apenas uma alternativa: é o caminho para um agro forte e sustentável. Reduz custos, preserva o meio ambiente e garante independência energética para o produtor rural.</p>
+                <p>O projeto <strong>Raízes Solares</strong> está alinhado com o tema <em>"Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente"</em>, pois mostra que é possível produzir mais com menos impacto ambiental.</p>
+                <p>🌱 Vamos juntos construir um futuro mais limpo no campo!</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Raízes Solares | Projeto Agrinho - Programação Front-End</p>
+        <p>Em defesa da energia limpa e da agricultura sustentável.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
